@@ -79,15 +79,15 @@ Production SQL migrations live in `supabase/migrations/`:
 ```mermaid
 sequenceDiagram
     participant Owner as Elderly Profile Owner
-    participant Server as Express / Edge Function
+    participant Server as Express or Edge Function
     participant Guest as Invited Member
     Owner->>Server: POST /api/invitations/create (role, permissions, expiry)
-    Server->>Server: Generate ES-XXXX-XXXX + random salt -> HMAC-SHA256 hash
+    Server->>Server: Generate ES-XXXX-XXXX with random salt and HMAC-SHA256 hash
     Server-->>Owner: Return one-time passcode (plaintext never stored)
     Owner-->>Guest: Share passcode out-of-band
     Guest->>Server: POST /api/invitations/redeem (passcode, name, email)
-    Server->>Server: Rate-limit + timingSafeEqual(hash) + check expiry/attempts
-    Server-->>Guest: Grant server-assigned role & permissions; mark code redeemed
+    Server->>Server: Rate-limit, timingSafeEqual(hash), check expiry and attempts
+    Server-->>Guest: Grant server-assigned role and permissions, mark code redeemed
 ```
 
 ## 9. Permission Model
