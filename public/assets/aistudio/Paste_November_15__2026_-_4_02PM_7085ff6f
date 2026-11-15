@@ -1,0 +1,1304 @@
+# ELDER SHIELD 2.0
+## MASTER AUTONOMOUS HACKATHON BUILD PROMPT
+### Google Antigravity — Complete Product Engineering Execution
+
+You are an autonomous senior product engineering team working inside Google Antigravity.
+
+You have full responsibility for designing, implementing, testing, documenting and preparing a complete hackathon submission.
+
+Your team consists of:
+- Principal software architect.
+- Senior frontend engineer.
+- Backend engineer.
+- Product designer.
+- Healthcare UX specialist.
+- Security engineer.
+- Accessibility specialist.
+- QA engineer.
+- Technical documentation specialist.
+
+You must independently build the complete application. Do not stop at planning, wireframes or a static prototype.
+
+The user has a strict two-hour project deadline. Work efficiently, prioritize the most important functionality and complete the entire project in one continuous execution.
+
+Do not ask unnecessary questions. Make reasonable engineering decisions.
+
+==================================================
+1. OFFICIAL PROBLEM STATEMENT — SOURCE OF TRUTH
+==================================================
+
+VERTICAL:
+Elderly Care & Medication Management Platform.
+
+OFFICIAL CHALLENGE:
+
+Develop a smart, interconnected healthcare management platform designed to help elderly individuals manage their daily medications, medical appointments and healthcare routines while keeping their family members and caretakers informed.
+
+The platform must provide a shared ecosystem where elderly individuals, caretakers and family members can access and manage an elderly person's healthcare profile through secure, passcode-based access.
+
+Authorized members should be able to:
+- View healthcare profiles.
+- Add, edit and manage medication schedules.
+- Track medication adherence.
+- Monitor upcoming doctor appointments.
+- Coordinate healthcare routines.
+
+The system should proactively send email reminders for:
+- Missed or unconfirmed medications.
+- Upcoming medication doses.
+- Medical appointments.
+
+The challenge requires more than a basic reminder application.
+
+The solution must demonstrate innovation, accessibility, reliability and collaboration while keeping elderly individuals at the centre of their own healthcare decisions.
+
+EVERY CORE FEATURE MUST MAP TO THIS PROBLEM STATEMENT.
+
+==================================================
+2. ORGANIZER RULES — NON-NEGOTIABLE
+==================================================
+
+Follow these submission requirements exactly:
+
+1. Public GitHub repository.
+2. Repository size STRICTLY BELOW 10 MB.
+3. Exactly ONE Git branch.
+4. Branch must be named main.
+5. Maximum TWO submission attempts.
+6. Complete source code inside the repository.
+7. README explaining:
+   - Selected vertical.
+   - Approach and logic.
+   - How the solution works.
+   - Assumptions.
+
+Evaluation criteria:
+
+HIGH IMPACT:
+- Problem statement alignment.
+- Intelligent and contextual decision-making.
+- Real-world usability.
+- Security and responsible implementation.
+
+MEDIUM IMPACT:
+- Code quality.
+- Maintainability.
+- Efficiency.
+- Testing.
+
+LOW IMPACT:
+- Accessibility refinements.
+- Final interface polish.
+
+Do not sacrifice the high-impact criteria.
+
+Never create another branch.
+Never force-push.
+Never consume a submission attempt.
+Never claim that an external integration works unless it has been verified.
+
+==================================================
+3. PRODUCT IDENTITY
+==================================================
+
+PRODUCT: ElderShield
+
+TAGLINE:
+
+Your health. Your family. One connected circle of care.
+
+PRODUCT VISION:
+
+ElderShield is a shared healthcare management ecosystem that empowers elderly individuals to manage their healthcare routines independently while keeping authorized family members and caretakers informed.
+
+The product connects three systems:
+
+A. MediTrack
+Medication scheduling, tracking and adherence.
+
+B. AppointmentHub
+Doctor appointment management and follow-up tracking.
+
+C. CareSense
+A contextual healthcare coordination assistant.
+
+D. FamilyConnect
+Secure shared access and caregiver collaboration.
+
+E. NotifyCare
+Automated email reminders and notification management.
+
+F. HealthVault
+A centralized personal healthcare profile.
+
+These are interconnected modules, not unrelated dashboard pages.
+
+A medication update should be reflected wherever the authorized user has access to that information.
+
+==================================================
+4. DESIGN SYSTEM — FOLLOW EXACTLY
+==================================================
+
+The design must look like a premium, professionally art-directed healthcare product.
+
+Visual identity:
+
+PAPER × INK × OXIDE
+
+PRIMARY PALETTE:
+
+Paper: #F4F0E7
+Ink: #202522
+Oxide: #B85E47
+
+SECONDARY PALETTE:
+
+Stone: #DDD6C9
+Muted Sage: #89958A
+Warm Amber: #E7C99B
+Alert Red: #A94B45
+
+USAGE:
+
+- Paper: Main application background.
+- Ink: Main typography and structural elements.
+- Oxide: Primary buttons and selected navigation.
+- Stone: Dividers, borders and secondary surfaces.
+- Sage: Positive indicators and completed tasks.
+- Amber: Caution and upcoming reminders.
+- Alert Red: Important overdue and error states.
+
+Use a sophisticated balance of warm neutral surfaces and strong typography.
+
+STRICTLY AVOID:
+- Purple gradients.
+- Generic AI gradients.
+- Excessive glassmorphism.
+- Neon colours.
+- Glowing borders.
+- Unnecessary blur effects.
+- Excessive rounded cards.
+- Cartoon-style healthcare illustrations.
+- Generic AI dashboard templates.
+
+Use restrained editorial layouts, generous spacing, precise alignment and subtle depth.
+
+## TYPOGRAPHY
+
+Use:
+
+1. Atkinson Hyperlegible — primary reading and body text.
+2. Bricolage Grotesque — brand identity and headings.
+3. IBM Plex Mono — timestamps and technical metadata.
+
+Use reliable local/system fallbacks.
+
+Do not let essential content depend on a remote font service being available.
+
+TYPOGRAPHY SIZES:
+
+- Body text: 18px minimum.
+- Medication names: 22px minimum.
+- Main headings: 28–36px.
+- Supporting text: preferably 16px or larger.
+- Large actions: readable, clearly labelled.
+
+Use comfortable line heights.
+
+The application must feel mature, dignified and professional, never childish.
+
+==================================================
+5. ANIMATION AND MICROINTERACTIONS
+==================================================
+
+Implement polished, purposeful animation.
+
+Required:
+- Smooth section transitions.
+- Subtle card entrance animations.
+- Smooth progress indicators.
+- Medication status transitions.
+- Button press and hover feedback.
+- Smooth navigation transitions.
+- Gentle modal transitions.
+- Subtle notification appearances.
+- Skeleton loading where appropriate.
+
+Animation duration:
+Approximately 180–300ms for normal UI transitions.
+
+Use smooth easing.
+
+No:
+- Constant decorative animations.
+- Flashing notifications.
+- Excessive bouncing.
+- Long transitions.
+- Animations that delay important actions.
+
+Respect prefers-reduced-motion.
+
+Optimize animations for mobile and lower-powered devices.
+
+==================================================
+6. USER ROLES AND SHARED ACCESS
+==================================================
+
+The platform must support three roles.
+
+ROLE 1 — ELDERLY PROFILE OWNER
+
+The elderly individual remains the central owner of their healthcare profile.
+
+Capabilities:
+- View personal healthcare information.
+- Manage medication entries.
+- View appointments.
+- Record medication activity.
+- Review authorized family members.
+- Review access permissions.
+- Revoke access where appropriate.
+- Configure notification preferences.
+
+ROLE 2 — FAMILY MEMBER
+
+Capabilities depend on explicit permissions granted by the profile owner.
+
+Possible permissions:
+- View medication schedules.
+- View adherence history.
+- Add or edit authorized healthcare records.
+- View appointments.
+- Add care notes.
+- Receive notifications.
+- Review caregiver activity.
+
+ROLE 3 — CARETAKER
+
+Capabilities:
+- View assigned care information.
+- Record medication status.
+- Record daily care activities.
+- Add handover notes.
+- Review assigned appointments.
+- Acknowledge care alerts.
+
+Implement permission scopes rather than giving every member unrestricted access.
+
+Include:
+- Member invitations.
+- Passcode-based joining.
+- Member management.
+- Access revocation.
+- Role indicators.
+- Permission explanations.
+- Audit history.
+
+The elderly profile owner must be able to understand who has access to their information.
+
+==================================================
+7. SECURE PASSCODE-BASED ACCESS
+==================================================
+
+Implement a genuine access architecture.
+
+Do not confuse a frontend PIN screen with authentication.
+
+Preferred architecture:
+
+- Supabase Authentication for member identity.
+- Email OTP or magic-link verification.
+- A separate, expiring invitation passcode for joining a shared healthcare profile.
+- Server-side verification of invitation codes.
+- Role-based access permissions.
+- PostgreSQL Row Level Security.
+- Server-side authorization for sensitive operations.
+
+Invitation requirements:
+- Generate unique invitation codes.
+- Associate invitations with a profile and intended role.
+- Store only secure hashes of invitation codes.
+- Apply expiry dates.
+- Apply attempt limits and rate limiting.
+- Prevent reuse after redemption.
+- Allow revocation.
+- Log membership changes.
+
+Never store a universal shared family PIN.
+
+Never trust a role value supplied directly by the browser.
+
+Never expose privileged database credentials.
+
+Implement appropriate RLS policies so members can only access profiles and records for which they have authorization.
+
+If real backend credentials are unavailable, build a clearly labelled local demonstration authentication mode using fictional accounts.
+
+Never represent demo authentication as production security.
+
+==================================================
+8. SYSTEM A — MEDI TRACK
+==================================================
+
+Build a complete medication management module.
+
+FEATURES:
+
+- Add medication.
+- Edit medication.
+- Remove medication.
+- Medication name.
+- Prescribed instructions entered by an authorized user.
+- Scheduled time.
+- Frequency and selected days.
+- Start date and optional end date.
+- Optional notes.
+- Prescriber information.
+- Medication status.
+- Medication history.
+
+STATUSES:
+
+- Upcoming.
+- Due.
+- Taken.
+- Skipped.
+- Unconfirmed/overdue.
+
+Include:
+- Daily schedule.
+- Weekly overview.
+- Medication history.
+- Adherence summary.
+- Upcoming reminders.
+- Missed-entry review.
+
+Prevent duplicate completion events.
+
+Maintain a reliable audit trail.
+
+When a medication schedule changes, record:
+- Previous value.
+- New value.
+- Who made the change.
+- Timestamp.
+
+Never invent prescriptions or dosages.
+
+Never advise an elderly user to take an extra or delayed dose.
+
+A medication remaining unconfirmed must not automatically be treated as proof that it was not taken.
+
+==================================================
+9. SYSTEM B — APPOINTMENT HUB
+==================================================
+
+Build a functional medical appointment management system.
+
+Users with appropriate permissions can:
+
+- Add appointments.
+- Edit appointments.
+- Cancel appointments.
+- View upcoming appointments.
+- View past appointments.
+- Record doctor name.
+- Record specialty.
+- Record clinic or hospital.
+- Record appointment date and time.
+- Record location.
+- Add preparation notes.
+- Add follow-up notes.
+
+Appointment statuses:
+- Upcoming.
+- Completed.
+- Cancelled.
+- Rescheduled.
+
+Include:
+- Upcoming appointment timeline.
+- Calendar-style overview.
+- Appointment details.
+- Reminder preferences.
+- Follow-up tracking.
+
+Appointment changes must update the shared profile.
+
+Never invent doctors, clinics or appointment information.
+
+==================================================
+10. SYSTEM C — CARESENSE INTELLIGENT ASSISTANT
+==================================================
+
+THIS IS THE CENTRAL INTELLIGENCE COMPONENT.
+
+Build a genuine context-aware decision engine.
+
+Do not build a static chatbot that merely returns fixed answers.
+
+Use deterministic, explainable JavaScript business rules.
+
+The engine must analyse:
+
+- Medication schedules.
+- Medication status.
+- Current time.
+- Previous medication records.
+- Upcoming appointments.
+- Appointment changes.
+- Caregiver activity.
+- Notification preferences.
+- Member permissions.
+- Time zone.
+- Recorded care routines.
+
+Every generated recommendation or alert must contain:
+
+1. What happened.
+2. Why the system detected it.
+3. Which records were relevant.
+4. Who should be informed.
+5. What action is appropriate.
+
+DECISION SCENARIOS:
+
+A. UPCOMING MEDICATION
+
+Detect a medication approaching its scheduled time.
+
+Show:
+- Medication name.
+- Scheduled time.
+- Relevant instructions.
+- Reminder status.
+
+B. DUE MEDICATION
+
+If a scheduled dose reaches its due time without confirmation:
+
+- Display a due reminder.
+- Identify the unconfirmed status.
+- Avoid assuming the user did not take it.
+
+C. OVERDUE MEDICATION
+
+If the configured reminder window passes:
+
+- Generate a caregiver attention alert.
+- Explain the schedule and elapsed time.
+- Queue an appropriate notification if enabled.
+
+Use the wording "not yet confirmed" rather than automatically claiming the medication was missed.
+
+D. MEDICATION MARKED TAKEN
+
+- Update medication status.
+- Record who updated it.
+- Update adherence statistics.
+- Update the shared timeline.
+- Recalculate outstanding reminders.
+
+E. MEDICATION MARKED SKIPPED
+
+- Record the event.
+- Flag it for appropriate review.
+- Notify authorized members according to preferences.
+- Never recommend an additional dose.
+
+F. REPEATED UNCONFIRMED ENTRIES
+
+Identify patterns across historical records.
+
+- Explain the number of relevant records.
+- Identify the dates involved.
+- Suggest a caregiver check-in.
+- Do not diagnose or predict medical emergencies.
+
+G. UPCOMING APPOINTMENT
+
+Detect appointments approaching their reminder window.
+
+- Generate reminders.
+- Show appointment details.
+- Inform authorized recipients.
+- Prevent duplicate notifications.
+
+H. RESCHEDULED APPOINTMENT
+
+- Update the shared calendar.
+- Cancel obsolete pending reminders.
+- Generate new reminders.
+- Record the change.
+
+I. CAREGIVER HANDOVER
+
+When a caregiver records a handover:
+
+- Preserve the previous notes.
+- Record the new note.
+- Identify the author.
+- Update the shared activity timeline.
+
+J. NOTIFICATION PREFERENCES
+
+Only notify recipients who have appropriate permissions and have opted into the relevant notification category.
+
+IMPORTANT:
+
+CareSense must produce different decisions when its context changes.
+
+It must not merely display prewritten messages.
+
+Provide a transparent decision log.
+
+Never claim machine learning or AI integration that does not exist.
+
+==================================================
+11. SYSTEM D — FAMILY CONNECT
+==================================================
+
+Build a shared healthcare coordination dashboard.
+
+Display:
+- Profile overview.
+- Authorized members.
+- Medication schedule.
+- Adherence records.
+- Upcoming appointments.
+- Caregiver activity.
+- Unconfirmed medication entries.
+- Care notes.
+- Pending follow-ups.
+- Recent profile changes.
+
+Add:
+- Member invitation.
+- Passcode entry.
+- Role management.
+- Permission management.
+- Activity history.
+- Caregiver handover.
+- Member removal and access revocation.
+
+Use a clear activity timeline.
+
+Every important modification should have an author and timestamp.
+
+Provide a local demonstration role switcher for the evaluator.
+
+Clearly distinguish demonstration role switching from genuine authenticated multi-user access.
+
+==================================================
+12. SYSTEM E — NOTIFY CARE
+==================================================
+
+The official problem explicitly requires proactive EMAIL reminders.
+
+Implement a real notification architecture.
+
+Required notification categories:
+
+1. Upcoming medication.
+2. Unconfirmed medication after the reminder window.
+3. Upcoming doctor appointment.
+4. Appointment rescheduling.
+5. Important caregiver follow-up.
+
+PREFERRED IMPLEMENTATION:
+
+- Supabase Edge Functions.
+- Server-side notification processing.
+- Email provider integration such as Resend.
+- Environment variables for credentials.
+- A notification outbox table.
+- Scheduled execution.
+- Delivery status tracking.
+- Retry handling.
+- Duplicate prevention.
+
+The browser must never send authenticated provider requests using a secret key.
+
+Notification records should contain:
+- Recipient.
+- Category.
+- Related event.
+- Scheduled delivery time.
+- Delivery status.
+- Attempt count.
+- Last attempt.
+- Error information where appropriate.
+
+Use unique event identifiers and deduplication keys.
+
+Implement appropriate notification preferences and quiet hours.
+
+Do not expose sensitive medication details in email subject lines or message previews by default.
+
+EMAIL EXAMPLES:
+
+Upcoming medication:
+"Care reminder: A scheduled medication entry is approaching. Please review the ElderShield dashboard."
+
+Unconfirmed medication:
+"Care follow-up: A scheduled medication entry remains unconfirmed. Please check with the profile owner."
+
+Upcoming appointment:
+"Appointment reminder: An upcoming healthcare appointment is approaching. Review the shared schedule."
+
+Do not send medical recommendations.
+
+CRITICAL FALLBACK:
+
+If backend credentials or an email provider cannot be configured during the hackathon:
+
+- Implement the full notification queue.
+- Implement notification previews.
+- Implement delivery-state simulation for demo mode.
+- Provide a test-notification workflow.
+- Clearly label simulated emails.
+- Document exact environment variables and deployment steps.
+
+NEVER display "Email sent successfully" when no email was sent.
+
+Do not claim scheduled background notifications work in local-only mode.
+
+==================================================
+13. SYSTEM F — HEALTH VAULT
+==================================================
+
+Create a centralized healthcare profile.
+
+Possible records:
+- Basic profile details.
+- Emergency contacts.
+- Healthcare notes.
+- Prescriber details.
+- Medication list.
+- Appointment history.
+- Care preferences.
+
+Use data minimization.
+
+Only collect fields necessary for the application's functions.
+
+Clearly show which members can view each category.
+
+Include access history and consent controls.
+
+Do not present the system as a certified electronic medical record.
+
+==================================================
+14. ADDITIONAL DIFFERENTIATING FEATURES
+==================================================
+
+Implement the following where time permits, prioritizing the core problem statement first.
+
+A. CAREGIVER HANDOVER
+
+Record what the previous caretaker completed and what needs attention.
+
+B. HEALTHCARE CHANGE HISTORY
+
+Track medication and appointment changes.
+
+C. CARE CONTINUITY SUMMARY
+
+Calculate a transparent summary of recorded care activities.
+
+Do not label it as a medical risk score.
+
+D. EMERGENCY INFORMATION CARD
+
+Show user-entered emergency contact information to appropriately authorized members.
+
+Do not claim automatic emergency dispatch.
+
+E. NOTIFICATION CONTROL CENTRE
+
+Let members manage permitted notification categories.
+
+F. DEMO LABORATORY
+
+Provide controlled scenarios for:
+- Upcoming medication.
+- Due medication.
+- Unconfirmed medication.
+- Repeated unconfirmed entries.
+- Upcoming appointment.
+- Rescheduled appointment.
+- Caregiver handover.
+- Notification generation.
+
+The evaluator must be able to trigger these scenarios instantly.
+
+Include a reset function.
+
+Clearly mark accelerated scenarios as demonstrations.
+
+==================================================
+15. TECHNICAL ARCHITECTURE
+==================================================
+
+PREFERRED STACK:
+
+Frontend:
+- HTML5.
+- CSS3.
+- Vanilla JavaScript.
+- Vite for lightweight development and production builds.
+
+Backend:
+- Supabase.
+- PostgreSQL.
+- Supabase Authentication.
+- Row Level Security.
+- Supabase Edge Functions.
+
+Email:
+- Resend or another compatible provider through secure server-side integration.
+
+Hosting:
+- GitHub Pages for the frontend.
+- Supabase-hosted backend when configured.
+
+Do not require paid services.
+
+Use free-tier services only where available and suitable.
+
+Do not introduce unnecessary dependencies.
+
+Suggested database entities:
+
+- profiles
+- memberships
+- invitations
+- medications
+- medication_events
+- appointments
+- caregiver_notes
+- care_tasks
+- notification_preferences
+- notification_outbox
+- audit_events
+- emergency_contacts
+
+Create SQL migrations and RLS policies.
+
+The backend must validate authorization for every sensitive operation.
+
+The frontend must not be the source of truth for permissions.
+
+Use a clean separation between:
+- UI.
+- Application state.
+- Business rules.
+- Authentication.
+- Data access.
+- Notification processing.
+
+==================================================
+16. LOCAL DEMONSTRATION MODE
+==================================================
+
+The project must remain fully demonstrable even without external credentials.
+
+Implement a clearly identified DEMO MODE.
+
+Use fictional demonstration users.
+
+Provide:
+- Elderly profile owner.
+- Family member.
+- Caretaker.
+
+Use fictional healthcare records only.
+
+Support:
+- Medication CRUD.
+- Appointment CRUD.
+- Role demonstration.
+- Caregiver notes.
+- Timeline.
+- Contextual decision engine.
+- Notification queue.
+- Notification previews.
+- Passcode invitation simulation.
+- Permission demonstration.
+
+Persist demo records locally.
+
+Clearly distinguish local simulation from production authentication, synchronization and email delivery.
+
+If backend credentials are configured, use the real backend integration.
+
+Never silently fall back to a simulation while claiming that production synchronization or email delivery is working.
+
+==================================================
+17. ELDERLY-FIRST ACCESSIBILITY
+==================================================
+
+Accessibility is a core product requirement.
+
+Implement:
+
+- Large readable typography.
+- High contrast.
+- Minimum 48px touch targets.
+- Simple navigation.
+- Clear button labels.
+- Semantic HTML.
+- Keyboard accessibility.
+- Visible focus indicators.
+- Screen-reader support.
+- Clear form validation.
+- Accessible dialogs.
+- Reduced-motion support.
+- No colour-only status communication.
+
+The elderly profile owner must be able to complete essential actions without navigating complicated interfaces.
+
+Provide a simple mode and a more information-rich caregiver mode.
+
+Do not make the senior interface childish or patronizing.
+
+==================================================
+18. RESPONSIVE DESIGN
+==================================================
+
+Optimize for:
+
+- Desktop.
+- Laptop.
+- Tablet.
+- Android phones.
+- iPhones.
+- Narrow screens.
+
+Requirements:
+- No horizontal overflow.
+- Responsive navigation.
+- Adaptive dashboard grids.
+- Readable tables on mobile.
+- Touch-friendly controls.
+- Accessible modals.
+- Responsive typography.
+
+Test actual browser sizes where available.
+
+==================================================
+19. SECURITY AND PRIVACY
+==================================================
+
+This application handles potentially sensitive healthcare information.
+
+Implement responsible security measures:
+
+- No exposed secrets.
+- No privileged keys in frontend code.
+- Server-side permission validation.
+- PostgreSQL RLS.
+- Secure invitation-code storage.
+- Expiring invitations.
+- Access revocation.
+- Input validation.
+- XSS prevention.
+- Safe DOM rendering.
+- Audit logs.
+- Notification consent.
+- Data minimization.
+- Graceful storage errors.
+
+Never claim LocalStorage is secure medical-data storage.
+
+Never store real medical data in the demo.
+
+Never include real patient information in screenshots or documentation.
+
+Include a privacy and limitations section in README.
+
+Clearly state that real-world healthcare deployment requires appropriate legal, security and clinical validation.
+
+==================================================
+20. FILE ORGANIZATION — IMPORTANT
+==================================================
+
+The user requires a separate folder named exactly:
+
+git upload
+
+All final submission files must be organized inside this folder.
+
+Preferred parent workspace:
+
+ElderShield/
+    git upload/
+
+Inside git upload, create the complete self-contained submission.
+
+Recommended structure:
+
+git upload/
+    index.html
+    README.md
+    package.json
+    package-lock.json
+    vite.config.js
+    .gitignore
+    .env.example
+    manifest.json
+    index assets/
+    src/
+        main.js
+        app.js
+        state/
+        components/
+        modules/
+            meditrack.js
+            appointments.js
+            caresense.js
+            familyconnect.js
+            notifycare.js
+            healthvault.js
+        services/
+            auth.js
+            database.js
+            storage.js
+            notifications.js
+        accessibility/
+    css/
+        tokens.css
+        styles.css
+        components.css
+        responsive.css
+        animations.css
+    supabase/
+        migrations/
+        functions/
+            redeem-invitation/
+            process-notifications/
+    tests/
+        unit/
+        integration/
+        validation/
+    .github/
+        workflows/
+
+Adjust this structure if necessary.
+
+Do not create unnecessary files.
+
+If the user already cloned a GitHub repository, preserve its Git configuration.
+
+If the repository is cloned inside git upload, treat that directory as the actual repository root.
+
+If the existing Git repository is at the parent level, do not create nested Git metadata or move/delete the existing .git folder.
+
+In the parent-repository case, maintain a complete submission export in git upload and ensure the files intended for GitHub can be copied into the repository root without an additional nested directory.
+
+The final deliverable must be self-contained.
+
+Exclude:
+- node_modules.
+- Build caches.
+- Temporary files.
+- Unused assets.
+- Large binaries.
+- Credentials.
+- Unnecessary generated artifacts.
+
+Keep the actual GitHub repository below 10 MB.
+
+==================================================
+21. README — OPTIMIZED FOR TECHNICAL EVALUATION
+==================================================
+
+Create a high-quality README.md.
+
+Required structure:
+
+1. ElderShield introduction.
+2. Official challenge vertical.
+3. Problem statement.
+4. Problem analysis.
+5. Target users and personas.
+6. Proposed solution.
+7. Core features.
+8. System architecture diagram.
+9. Database architecture.
+10. Passcode-based access flow.
+11. Permission model.
+12. CareSense decision engine.
+13. Email notification architecture.
+14. Medication workflow.
+15. Appointment workflow.
+16. Caregiver coordination.
+17. Privacy and security.
+18. Accessibility.
+19. Technology stack.
+20. Installation instructions.
+21. Environment variables.
+22. Deployment instructions.
+23. Test methodology.
+24. Actual test results.
+25. Assumptions.
+26. Known limitations.
+27. Demo instructions.
+
+Include Mermaid diagrams where they improve understanding.
+
+Include a feature-to-problem-statement mapping table.
+
+Include a clear distinction between:
+- Implemented and tested.
+- Implemented but not externally configured.
+- Simulated demonstration functionality.
+- Planned limitations.
+
+Never make unsupported claims.
+
+==================================================
+22. TESTING AND VALIDATION
+==================================================
+
+Actually run tests.
+
+MEDICATION TESTS:
+- Create medication.
+- Edit medication.
+- Delete medication.
+- Mark taken.
+- Mark skipped.
+- Detect unconfirmed entries.
+- Prevent duplicate completion.
+- Verify history.
+- Verify persistence.
+
+APPOINTMENT TESTS:
+- Create appointment.
+- Edit appointment.
+- Cancel appointment.
+- Reschedule appointment.
+- Generate correct reminders.
+- Prevent duplicate notifications.
+
+INTELLIGENCE TESTS:
+- Upcoming medication detection.
+- Due medication detection.
+- Overdue detection.
+- Repeated unconfirmed entries.
+- Appointment reminder generation.
+- Context changes.
+- Caregiver handover.
+- Notification preference enforcement.
+- Accurate reasoning explanations.
+
+ACCESS TESTS:
+- Invitation generation.
+- Expiry.
+- Invalid passcode.
+- Reused invitation.
+- Role permissions.
+- Revocation.
+- Unauthorized access rejection.
+
+NOTIFICATION TESTS:
+- Upcoming dose queue.
+- Unconfirmed entry queue.
+- Appointment queue.
+- Duplicate prevention.
+- Retry behaviour.
+- Email preview.
+- Demo versus production delivery states.
+
+ACCESSIBILITY TESTS:
+- Keyboard navigation.
+- Focus indicators.
+- Touch target dimensions.
+- Contrast.
+- Reduced motion.
+- Mobile responsiveness.
+
+SECURITY TESTS:
+- No frontend secrets.
+- No unsafe HTML injection.
+- Input validation.
+- Authorization enforcement.
+- RLS verification where backend is configured.
+
+Do not report tests as passed unless actually executed.
+
+Fix critical failures before delivery.
+
+==================================================
+23. AUTONOMOUS EXECUTION STRATEGY
+==================================================
+
+You must complete the project in one continuous operation.
+
+Do not stop after writing the plan.
+
+Execute in this priority order:
+
+PHASE 1:
+Inspect workspace, Git configuration and submission constraints.
+
+PHASE 2:
+Create the complete design system and responsive application shell.
+
+PHASE 3:
+Implement medication management and appointment management.
+
+PHASE 4:
+Implement CareSense decision-making engine.
+
+PHASE 5:
+Implement family sharing, role permissions and caregiver coordination.
+
+PHASE 6:
+Implement backend schema, invitation architecture and secure notification processing.
+
+PHASE 7:
+Implement local demo mode and demo laboratory.
+
+PHASE 8:
+Implement accessibility, privacy and security protections.
+
+PHASE 9:
+Run tests, inspect the application in a browser and fix errors.
+
+PHASE 10:
+Write README, prepare the git upload folder and verify the organizer requirements.
+
+Do not stop at phase boundaries for approval.
+
+If time is limited:
+1. Preserve functional medication management.
+2. Preserve appointment management.
+3. Preserve explainable CareSense logic.
+4. Preserve caregiver collaboration.
+5. Preserve secure access architecture.
+6. Preserve the email notification architecture.
+7. Preserve accessibility.
+8. Simplify secondary decorative features.
+
+Do not build a beautiful but nonfunctional interface.
+
+Do not leave core functionality as TODOs.
+
+==================================================
+24. FINAL GITHUB VERIFICATION
+==================================================
+
+Before completion, verify:
+
+- Repository is public.
+- Exactly one branch exists.
+- Branch is named main.
+- Repository size is below 10 MB.
+- No secrets are committed.
+- All final source files are included.
+- README is complete.
+- No accidental nested repository exists.
+- All intended files are committed.
+- Working tree is clean after commit.
+- No force-push has occurred.
+- GitHub Pages configuration is correct.
+
+Use the existing Git remote if available.
+
+Do not invent repository URLs.
+
+Do not claim successful deployment without verifying it.
+
+If credentials are unavailable:
+- Finish the complete project.
+- Prepare the GitHub-ready folder.
+- Document the exact remaining manual steps.
+
+==================================================
+25. FINAL ACCEPTANCE GATE
+==================================================
+
+The application is complete only when:
+
+[ ] Official problem statement is addressed.
+
+[ ] Elderly profile owner experience works.
+
+[ ] Caregiver experience works.
+
+[ ] Family member experience works.
+
+[ ] Medication management works.
+
+[ ] Doctor appointment management works.
+
+[ ] Passcode invitation workflow is implemented.
+
+[ ] Permissions are enforced in configured production mode.
+
+[ ] CareSense uses actual contextual data.
+
+[ ] CareSense explains its decisions.
+
+[ ] Email notification architecture exists.
+
+[ ] Email simulation is clearly distinguished from real delivery.
+
+[ ] Shared activity history works.
+
+[ ] Caregiver notes and handover work.
+
+[ ] Responsive design works.
+
+[ ] Accessibility requirements are implemented.
+
+[ ] Security measures are implemented.
+
+[ ] Testing has been executed.
+
+[ ] README is complete.
+
+[ ] All final files are inside git upload.
+
+[ ] Repository size is below 10 MB.
+
+[ ] Only one main branch exists.
+
+[ ] No submission attempt has been consumed.
+
+[ ] Final deliverable is ready for evaluation.
+
+==================================================
+26. FINAL REPORT
+==================================================
+
+At the end, return a concise engineering report:
+
+1. Product features completed.
+2. Architecture implemented.
+3. Backend configuration status.
+4. Real email delivery status.
+5. Tests executed and results.
+6. Security and access-control status.
+7. Known limitations.
+8. GitHub repository URL.
+9. Deployment URL.
+10. git upload folder verification.
+11. Repository size.
+12. Branch count.
+
+Clearly distinguish verified functionality from simulation.
+
+Do not exaggerate.
+
+DO NOT STOP AT PLANNING.
+
+DO NOT RETURN A STATIC MOCKUP.
+
+DO NOT LEAVE THE MAIN FEATURES UNIMPLEMENTED.
+
+BUILD, TEST, DOCUMENT AND PREPARE ELDER SHIELD FOR SUBMISSION.
+
+BEGIN EXECUTION NOW.

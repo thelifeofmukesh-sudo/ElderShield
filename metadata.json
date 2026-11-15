@@ -1,0 +1,6 @@
+{
+  "name": "ElderShield",
+  "description": "Your health. Your family. One connected circle of care — Elderly care, medication management, doctor appointments, and family coordination platform.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

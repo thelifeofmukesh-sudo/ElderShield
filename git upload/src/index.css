@@ -1,0 +1,82 @@
+@import "tailwindcss";
+
+:root {
+  --es-paper: #F4F0E7;
+  --es-surface: #FAF8F3;
+  --es-surface-alt: #EFEAE0;
+  --es-ink: #202522;
+  --es-ink-muted: #515853;
+  --es-oxide: #B85E47;
+  --es-oxide-hover: #9C4934;
+  --es-stone: #DDD6C9;
+  --es-sage: #89958A;
+  --es-sage-bg: #E7ECE7;
+  --es-sage-text: #344737;
+  --es-amber: #E7C99B;
+  --es-amber-bg: #F6ECD9;
+  --es-amber-text: #654513;
+  --es-alert: #A94B45;
+  --es-alert-bg: #F6E6E5;
+  --es-alert-text: #7F2D28;
+}
+
+@layer base {
+  html {
+    font-family: 'Atkinson Hyperlegible', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+    font-size: 18px;
+    line-height: 1.55;
+    color: var(--es-ink);
+    background-color: var(--es-paper);
+    -webkit-font-smoothing: antialiased;
+    overflow-x: hidden;
+  }
+
+  body {
+    margin: 0;
+    background-color: var(--es-paper);
+    color: var(--es-ink);
+    overflow-x: hidden;
+  }
+
+  h1, h2, h3, .font-display {
+    font-family: 'Bricolage Grotesque', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+    letter-spacing: -0.015em;
+    text-wrap: balance;
+  }
+
+  .font-mono-data {
+    font-family: 'IBM Plex Mono', ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
+    font-variant-numeric: tabular-nums;
+  }
+
+  /* Accessible visible focus indicators */
+  :focus-visible {
+    outline: 3px solid var(--es-oxide);
+    outline-offset: 2px;
+  }
+
+  /* Minimum 48px touch target helper for elderly-first ergonomics */
+  .touch-target {
+    min-height: 48px;
+    min-width: 48px;
+  }
+}
+
+/* Smooth editorial transitions (180-260ms) */
+.es-transition {
+  transition: transform 200ms cubic-bezier(0.16, 1, 0.3, 1),
+              opacity 200ms cubic-bezier(0.16, 1, 0.3, 1),
+              background-color 180ms ease,
+              border-color 180ms ease,
+              color 180ms ease;
+}
+
+/* Respect prefers-reduced-motion */
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}

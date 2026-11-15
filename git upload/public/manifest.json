@@ -1,0 +1,9 @@
+{
+  "name": "ElderShield",
+  "short_name": "ElderShield",
+  "description": "Shared elderly care, medication management, doctor appointments, and family coordination platform.",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#F4F0E7",
+  "theme_color": "#B85E47"
+}
